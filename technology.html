@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalus Technologies | Technology</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-main logo-main-ar">ANDALUS</span>
+                    <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-ar">شركة اندلس العلمية التقنية</span>
+                    <span class="logo-main logo-main-en" style="display:none;">ANDALUS</span>
+                    <span class="logo-sub logo-sub-en" style="display:none;">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-en" style="display:none;">INNOVATING TODAY, EMPOWERING TOMORROW</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-trans="home">Home</a></li>
+                <li><a href="about.html" data-trans="about">About Us</a></li>
+                <li><a href="services.html" data-trans="services">Services</a></li>
+                <li><a href="booking.html" data-trans="booking">Booking</a></li>
+                <li><a href="contact.html" data-trans="contact">Contact Us</a></li>
+                <li><a href="settings.html" data-trans="settings">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📡 <span data-trans="tech_title">Modern Technology</span></h1>
+            <p data-trans="tech_desc_page">Keeping up with the latest global technologies and their practical applications</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 data-trans="tech_fields">Fields of Modern Technology</h2>
+            <p data-trans="tech_fields_desc">We offer courses and workshops in the latest technology fields to qualify you for the future job market.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🌐 <span data-trans="tech_iot">Internet of Things (IoT)</span></h3>
+                    <p data-trans="tech_iot_desc">Design and development of IoT systems, connecting smart devices, and data analysis.</p>
+                    <a href="booking.html" class="btn-link" data-trans="go_to_booking">Click to go to booking page ←</a>
+                </div>
+                <div class="service-card">
+                    <h3>☁️ <span data-trans="tech_cloud">Cloud Computing</span></h3>
+                    <p data-trans="tech_cloud_desc">AWS, Azure, Google Cloud services, and cloud infrastructure management.</p>
+                    <a href="booking.html" class="btn-link" data-trans="go_to_booking">Click to go to booking page ←</a>
+                </div>
+                <div class="service-card">
+                    <h3>🥽 <span data-trans="tech_vr">Virtual and Augmented Reality</span></h3>
+                    <p data-trans="tech_vr_desc">Developing VR and AR applications for gaming and education.</p>
+                    <a href="booking.html" class="btn-link" data-trans="go_to_booking">Click to go to booking page ←</a>
+                </div>
+                <div class="service-card">
+                    <h3>🖨️ <span data-trans="tech_3d">3D Printing</span></h3>
+                    <p data-trans="tech_3d_desc">3D design and modeling, and printing applications in industry and medicine.</p>
+                    <a href="booking.html" class="btn-link" data-trans="go_to_booking">Click to go to booking page ←</a>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="booking.html" class="btn" style="display:inline-block; background:var(--secondary); color:var(--primary); padding:14px 40px; border-radius:50px; font-weight:700;" data-trans="tech_register">📅 Register Now for Technology Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

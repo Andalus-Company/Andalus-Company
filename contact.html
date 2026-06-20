@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalus Technologies | Contact Us</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-main logo-main-ar">ANDALUS</span>
+                    <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-ar">شركة اندلس العلمية التقنية</span>
+                    <span class="logo-main logo-main-en" style="display:none;">ANDALUS</span>
+                    <span class="logo-sub logo-sub-en" style="display:none;">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-en" style="display:none;">INNOVATING TODAY, EMPOWERING TOMORROW</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-trans="home">Home</a></li>
+                <li><a href="about.html" data-trans="about">About Us</a></li>
+                <li><a href="services.html" data-trans="services">Services</a></li>
+                <li><a href="booking.html" data-trans="booking">Booking</a></li>
+                <li><a href="contact.html" class="active" data-trans="contact">Contact Us</a></li>
+                <li><a href="settings.html" data-trans="settings">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📞 <span data-trans="contact_title">Contact Us</span></h1>
+            <p data-trans="contact_desc">We are here to serve you – contact us anytime</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <div class="contact-info-card">
+                    <div class="contact-info-header">
+                        <span class="contact-info-icon">📌</span>
+                        <h2 data-trans="contact_info">Contact Information</h2>
+                    </div>
+                    <div class="contact-info-body">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <strong data-trans="address">Address:</strong>
+                                <span data-trans="jordan">Jordan</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🗺️</div>
+                            <div class="contact-item-text">
+                                <strong data-trans="location">Location:</strong>
+                                <span>32°05'22.1"N 36°05'37.3"E</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <strong>Phone:</strong>
+                                <span>079*******</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-text">
+                                <strong>Email:</strong>
+                                <span>info@andalus-tech.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕒</div>
+                            <div class="contact-item-text">
+                                <strong data-trans="working_hours">Working Hours:</strong>
+                                <span data-trans="working_hours_text">Sunday – Thursday 9:00 AM – 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map-btn">
+                        <a href="https://www.google.com/maps?q=32.089472,36.093694" target="_blank" data-trans="view_map">
+                            🗺️ View on Google Maps ←
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <div class="contact-form-header">
+                        <span class="contact-form-icon">✉️</span>
+                        <h2 data-trans="send_message">Send a Message</h2>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName" data-trans="full_name">Full Name *</label>
+                            <input type="text" id="contactName" placeholder="Enter your name" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmailInput" data-trans="email_address">Email Address *</label>
+                            <input type="email" id="contactEmailInput" placeholder="example@email.com" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject" data-trans="subject">Subject *</label>
+                            <input type="text" id="contactSubject" placeholder="Message subject" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" data-trans="message">Message *</label>
+                            <textarea id="contactMessage" placeholder="Write your message here..." class="form-textarea"></textarea>
+                        </div>
+                        <button type="submit" class="btn-send" data-trans="send_btn">
+                            📤 Send Message
+                        </button>
+                    </form>
+                    <div id="contactMessageStatus" class="contact-status" style="display:none;"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

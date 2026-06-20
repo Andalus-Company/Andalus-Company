@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalus Technologies | Booking</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-main logo-main-ar">ANDALUS</span>
+                    <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-ar">شركة اندلس العلمية التقنية</span>
+                    <span class="logo-main logo-main-en" style="display:none;">ANDALUS</span>
+                    <span class="logo-sub logo-sub-en" style="display:none;">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-en" style="display:none;">INNOVATING TODAY, EMPOWERING TOMORROW</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-trans="home">Home</a></li>
+                <li><a href="about.html" data-trans="about">About Us</a></li>
+                <li><a href="services.html" data-trans="services">Services</a></li>
+                <li><a href="booking.html" class="active" data-trans="booking">Booking</a></li>
+                <li><a href="contact.html" data-trans="contact">Contact Us</a></li>
+                <li><a href="settings.html" data-trans="settings">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📅 <span data-trans="booking_title">Booking Page</span></h1>
+            <p data-trans="booking_desc">Book your service or training course now with ease</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="booking-form">
+                <form id="bookingForm" onsubmit="return validateForm()">
+                    <h2 style="text-align:center; color:var(--primary); margin-bottom:25px;" data-trans="booking_form_title">📋 Booking Form</h2>
+                    
+                    <div class="form-group">
+                        <label for="fullName" data-trans="full_name">Full Name (4 words only) *</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name (4 words)" required>
+                        <small style="color:var(--gray); font-size:12px;">Please enter exactly 4 words</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" data-trans="phone_number">Phone Number *</label>
+                        <input type="text" id="phone" placeholder="Enter phone number (numbers only)" required>
+                        <small style="color:var(--gray); font-size:12px;">Numbers only, no letters</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-trans="email_address">Email Address *</label>
+                        <input type="email" id="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType" data-trans="service_type">Service Type *</label>
+                        <select id="serviceType" required>
+                            <option value="" data-trans="select_service">-- Select Service --</option>
+                            <option value="hardware" data-trans="service_hardware">Computer Maintenance (Hardware)</option>
+                            <option value="networks" data-trans="service_networks">Network Installation</option>
+                            <option value="ai" data-trans="service_ai">AI Course</option>
+                            <option value="technology" data-trans="service_tech">Modern Technology Course</option>
+                            <option value="it" data-trans="service_it">IT Course</option>
+                            <option value="cybersecurity" data-trans="service_cyber">Cybersecurity Course</option>
+                            <option value="icdl" data-trans="service_icdl">ICDL Course</option>
+                            <option value="support" data-trans="service_support">Technical Support for Companies</option>
+                            <option value="cleaning" data-trans="service_cleaning">Device Cleaning</option>
+                            <option value="other" data-trans="service_other">Other Service</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingDate" data-trans="preferred_date">Preferred Date (Month & Day only) *</label>
+                        <input type="text" id="bookingDate" placeholder="MM/DD" required>
+                        <small style="color:var(--gray); font-size:12px;">Format: MM/DD (e.g. 06/21)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime" data-trans="preferred_time">Preferred Time (Saturday & Monday only) *</label>
+                        <select id="bookingTime" required>
+                            <option value="" data-trans="select_time">-- Select Time --</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="1:00">1:00 PM</option>
+                            <option value="1:30">1:30 PM</option>
+                            <option value="2:00">2:00 PM</option>
+                        </select>
+                        <small style="color:var(--gray); font-size:12px;">Available on Saturdays and Mondays only</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes" data-trans="additional_notes">Additional Notes</label>
+                        <textarea id="notes" placeholder="Any additional details you would like to add..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" data-trans="confirm_booking">✅ Confirm Booking</button>
+                </form>
+                <div id="bookingMessage" style="margin-top:20px; text-align:center; display:none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

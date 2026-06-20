@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalus Technologies | Home</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-main logo-main-ar">ANDALUS</span>
+                    <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-ar">شركة اندلس العلمية التقنية</span>
+                    <span class="logo-main logo-main-en" style="display:none;">ANDALUS</span>
+                    <span class="logo-sub logo-sub-en" style="display:none;">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-en" style="display:none;">INNOVATING TODAY, EMPOWERING TOMORROW</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active" data-trans="home">Home</a></li>
+                <li><a href="about.html" data-trans="about">About Us</a></li>
+                <li><a href="services.html" data-trans="services">Services</a></li>
+                <li><a href="booking.html" data-trans="booking">Booking</a></li>
+                <li><a href="contact.html" data-trans="contact">Contact Us</a></li>
+                <li><a href="settings.html" data-trans="settings">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="welcome-popup" id="welcomePopup" style="display:none;">
+        <div class="welcome-content">
+            <img src="images/logo-ar.jpg" alt="Andalus" class="logo-ar" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px; border:3px solid var(--secondary);" onerror="this.style.display='none'">
+            <img src="images/logo-en.jpg" alt="Andalus" class="logo-en" style="width:80px; height:80px; border-radius:50%; margin-bottom:15px; border:3px solid var(--secondary); display:none;" onerror="this.style.display='none'">
+            <h2 data-trans="welcome_title">🏛️ Welcome to</h2>
+            <h2 style="color: var(--secondary); font-size:28px;" data-trans="company_name">Andalus Scientific Technology</h2>
+            <p style="margin:15px 0;" data-trans="welcome_desc">We provide the latest technical and training solutions in AI, Cybersecurity, Computer and Network Maintenance.</p>
+            <button class="close-welcome" id="closeWelcome" data-trans="start_now">Start Now</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-trans="hero_title">Welcome to <span>Andalus</span> Technology</h1>
+            <p data-trans="hero_desc">A specialized technical center offering computer maintenance, networking, technical support, and training courses in AI, Cybersecurity, and IT.</p>
+            <a href="booking.html" class="btn" data-trans="book_now">Book Your Service Now</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 data-trans="features_title">🔹 Our Featured Services</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🖥️</div>
+                    <h3 data-trans="service1_title">Computer Maintenance</h3>
+                    <p data-trans="service1_desc">Hardware and software maintenance, cleaning, and OS installation with highest quality.</p>
+                    <a href="services.html#hardware" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3 data-trans="service2_title">Networks</h3>
+                    <p data-trans="service2_desc">Network installation, comprehensive maintenance, and technical support for companies.</p>
+                    <a href="services.html#networks" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3 data-trans="service3_title">Artificial Intelligence</h3>
+                    <p data-trans="service3_desc">Advanced training courses in AI and its practical applications.</p>
+                    <a href="ai.html" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3 data-trans="service4_title">Cybersecurity</h3>
+                    <p data-trans="service4_desc">Professional training in cybersecurity and system/data protection.</p>
+                    <a href="cybersecurity.html" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💻</div>
+                    <h3 data-trans="service5_title">Information Technology</h3>
+                    <p data-trans="service5_desc">ICDL courses, IT, and integrated technical support for students and companies.</p>
+                    <a href="it.html" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📡</div>
+                    <h3 data-trans="service6_title">Modern Technology</h3>
+                    <p data-trans="service6_desc">Keeping up with the latest technologies and their applications.</p>
+                    <a href="technology.html" class="card-link" data-trans="go_to_page">Click to go to page ←</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

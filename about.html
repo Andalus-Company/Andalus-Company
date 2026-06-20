@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalus Technologies | About Us</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-main logo-main-ar">ANDALUS</span>
+                    <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-ar">شركة اندلس العلمية التقنية</span>
+                    <span class="logo-main logo-main-en" style="display:none;">ANDALUS</span>
+                    <span class="logo-sub logo-sub-en" style="display:none;">TECHNOLOGIES</span>
+                    <span class="logo-slogan logo-slogan-en" style="display:none;">INNOVATING TODAY, EMPOWERING TOMORROW</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-trans="home">Home</a></li>
+                <li><a href="about.html" class="active" data-trans="about">About Us</a></li>
+                <li><a href="services.html" data-trans="services">Services</a></li>
+                <li><a href="booking.html" data-trans="booking">Booking</a></li>
+                <li><a href="contact.html" data-trans="contact">Contact Us</a></li>
+                <li><a href="settings.html" data-trans="settings">⚙️ Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>🏛️ <span data-trans="about_title">About Us</span></h1>
+            <p data-trans="about_desc">Learn about Andalus Scientific Technology Company, our vision and mission</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 data-trans="about_company">About Andalus Scientific Technology Company</h2>
+            <p data-trans="about_p1">Andalus Scientific Technology Company is a Jordanian company specialized in providing technical solutions and professional training, aiming to empower individuals and institutions to keep up with technological development and build practical skills that meet the requirements of the modern labor market.</p>
+            <p data-trans="about_p2">The company offers computer and network maintenance services, technical solutions, professional training, and technical consultations, in addition to a range of specialized courses in ICDL, Artificial Intelligence, Cybersecurity, and Computer and Network Maintenance.</p>
+            <p data-trans="about_p3">Andalus Scientific Technology seeks to provide training programs that combine theoretical and practical aspects under the supervision of qualified trainers, focusing on developing technical skills and raising the efficiency of trainees in line with the needs of the local and regional labor market.</p>
+
+            <h2 style="margin-top:40px;" data-trans="vision">🌟 Our Vision</h2>
+            <p data-trans="vision_text">To be among the leading companies in training and technology in Jordan and the region, by providing high-quality technical and educational services that contribute to building a creative and qualified digital generation.</p>
+
+            <h2 style="margin-top:30px;" data-trans="mission">🎯 Our Mission</h2>
+            <p data-trans="mission_text">Empowering individuals and institutions to benefit from the latest technologies and digital knowledge through practical training and distinguished technical services, contributing to sustainable professional and technological development.</p>
+
+            <h2 style="margin-top:30px;" data-trans="values">💎 Our Values</h2>
+            <ul>
+                <li data-trans="value1">Quality and professionalism.</li>
+                <li data-trans="value2">Innovation and continuous development.</li>
+                <li data-trans="value3">Credibility and transparency.</li>
+                <li data-trans="value4">Community service and dissemination of technical knowledge.</li>
+                <li data-trans="value5">Focus on practical application and actual results.</li>
+            </ul>
+
+            <div style="margin-top:40px; background:#f0f4f8; padding:20px; border-radius:12px; border-right:5px solid var(--secondary);">
+                <p style="font-weight:600; color:var(--primary);" data-trans="location">📍 Our Location in Jordan:</p>
+                <p style="font-size:16px;">32°05'22.1"N 36°05'37.3"E</p>
+                <p style="font-size:14px; color:var(--gray);" data-trans="location_desc">You can visit our headquarters at this geographic location</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
