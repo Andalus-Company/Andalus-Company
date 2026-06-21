@@ -172,6 +172,8 @@ const translations = {
         service5_desc: 'دورات ICDL، IT، ودعم تقني متكامل للطلاب والشركات.',
         service6_title: 'التكنولوجيا الحديثة',
         service6_desc: 'مواكبة أحدث التقنيات وتطبيقاتها في مختلف المجالات.',
+        service7_title: 'ICDL (الرخصة الدولية)',
+        service7_desc: 'دورات تحضيرية لامتحان الرخصة الدولية لقيادة الحاسوب بجميع وحداته.',
         go_to_page: 'أنقر للذهاب للصفحة ←',
         company_footer: 'شركة أندلس العلمية التقنية',
         all_rights: 'جميع الحقوق محفوظة',
@@ -243,6 +245,15 @@ const translations = {
         cyber_li2: 'اختبار الاختراق الأخلاقي (Penetration Testing).',
         cyber_li3: 'أمن التطبيقات والبيانات.',
         cyber_li4: 'الاستجابة للحوادث الأمنية.',
+        service_icdl: '📜 ICDL (الرخصة الدولية لقيادة الحاسوب)',
+        icdl_desc: 'دورات تحضيرية متكاملة لامتحان الرخصة الدولية لقيادة الحاسوب، تشمل جميع الوحدات الأساسية:',
+        icdl_li1: 'مفاهيم تكنولوجيا المعلومات (IT Fundamentals).',
+        icdl_li2: 'استخدام الحاسوب وإدارة الملفات (Computers and Files).',
+        icdl_li3: 'معالجة النصوص (Word Processing).',
+        icdl_li4: 'جداول البيانات (Spreadsheets).',
+        icdl_li5: 'قواعد البيانات (Databases).',
+        icdl_li6: 'العروض التقديمية (Presentations).',
+        icdl_li7: 'مهارات الإنترنت والبريد الإلكتروني (Internet and Email).',
         go_to_booking: 'أنقر للذهاب لصفحة الحجز ←',
         booking_title: 'صفحة الحجز',
         booking_desc: 'احجز خدمتك أو دورتك التدريبية الآن بكل سهولة',
@@ -321,7 +332,7 @@ const translations = {
         cyber_response: 'الاستجابة للحوادث',
         cyber_response_desc: 'كيفية التعامل مع الحوادث الأمنية، تحليل الأدلة الرقمية، والاستجابة السريعة.',
         cyber_register: '📅 سجل الآن في دورة الأمن السيبراني',
-        service_icdl: 'دورة ICDL',
+        service_icdl_booking: 'دورة ICDL',
         service_support: 'دعم فني للشركات',
         service_cleaning: 'تنظيف أجهزة',
         service_other: 'خدمة أخرى'
@@ -353,6 +364,8 @@ const translations = {
         service5_desc: 'ICDL courses, IT, and integrated technical support for students and companies.',
         service6_title: 'Modern Technology',
         service6_desc: 'Keeping up with the latest technologies and their applications.',
+        service7_title: 'ICDL (International License)',
+        service7_desc: 'Preparation courses for the ICDL exam with all its modules.',
         go_to_page: 'Click to go to page ←',
         company_footer: 'Andalus Scientific Technology Company',
         all_rights: 'All Rights Reserved',
@@ -424,6 +437,15 @@ const translations = {
         cyber_li2: 'Ethical Penetration Testing.',
         cyber_li3: 'Application and data security.',
         cyber_li4: 'Security incident response.',
+        service_icdl: '📜 ICDL (International Computer Driving License)',
+        icdl_desc: 'Integrated preparation courses for the ICDL exam, covering all basic modules:',
+        icdl_li1: 'IT Fundamentals.',
+        icdl_li2: 'Computers and Files Management.',
+        icdl_li3: 'Word Processing.',
+        icdl_li4: 'Spreadsheets.',
+        icdl_li5: 'Databases.',
+        icdl_li6: 'Presentations.',
+        icdl_li7: 'Internet and Email Skills.',
         go_to_booking: 'Click to go to booking page ←',
         booking_title: 'Booking Page',
         booking_desc: 'Book your service or training course now with ease',
@@ -502,7 +524,7 @@ const translations = {
         cyber_response: 'Incident Response',
         cyber_response_desc: 'How to handle security incidents, digital forensics analysis, and rapid response.',
         cyber_register: '📅 Register Now for Cybersecurity Course',
-        service_icdl: 'ICDL Course',
+        service_icdl_booking: 'ICDL Course',
         service_support: 'Technical Support for Companies',
         service_cleaning: 'Device Cleaning',
         service_other: 'Other Service'
@@ -529,21 +551,15 @@ function applyLanguage(lang) {
 }
 
 function applyLogo(lang) {
-    const logoAr = document.querySelectorAll('.logo-ar');
-    const logoEn = document.querySelectorAll('.logo-en');
-    const textAr = document.querySelectorAll('.logo-main-ar, .logo-sub-ar, .logo-slogan-ar');
-    const textEn = document.querySelectorAll('.logo-main-en, .logo-sub-en, .logo-slogan-en');
+    const logoAr = document.querySelectorAll('.logo-main-ar, .logo-sub-ar, .logo-slogan-ar');
+    const logoEn = document.querySelectorAll('.logo-main-en, .logo-sub-en, .logo-slogan-en');
 
     if (lang === 'en') {
         logoAr.forEach(el => el.style.display = 'none');
         logoEn.forEach(el => el.style.display = 'block');
-        textAr.forEach(el => el.style.display = 'none');
-        textEn.forEach(el => el.style.display = 'block');
     } else {
         logoAr.forEach(el => el.style.display = 'block');
         logoEn.forEach(el => el.style.display = 'none');
-        textAr.forEach(el => el.style.display = 'block');
-        textEn.forEach(el => el.style.display = 'none');
     }
 }
 
