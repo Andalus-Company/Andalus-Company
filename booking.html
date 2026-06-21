@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andalus Technologies | Booking</title>
-    <link rel="icon" type="image/jpeg" href="logo-ar.jpg">
+    <link rel="icon" type="image/jpeg" href="images/logo-ar.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,8 @@
     <header class="header glass-header">
         <div class="container">
             <div class="logo">
-                <div class="logo-icon">🏛️</div>
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
                 <div class="logo-text">
                     <span class="logo-main logo-main-ar">ANDALUS</span>
                     <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
@@ -48,29 +49,30 @@
     <section class="content-section">
         <div class="container">
             <div class="booking-form glass-card">
-                <form id="bookingForm">
+                <!-- تم ربط النموذج بـ Formspree وإضافة طريقة الإرسال POST -->
+                <form id="bookingForm" action="https://formspree.io" method="POST">
                     <h2 style="text-align:center; color:var(--secondary); margin-bottom:25px;" data-trans="booking_form_title">📋 Booking Form</h2>
                     
                     <div class="form-group">
                         <label for="fullName" data-trans="full_name">Full Name (4 words only) *</label>
-                        <input type="text" id="fullName" placeholder="Enter your full name (4 words)" required>
+                        <input type="text" id="fullName" name="الاسم الكامل" placeholder="Enter your full name (4 words)" required>
                         <small style="color:var(--gray); font-size:12px;">Please enter exactly 4 words</small>
                     </div>
 
                     <div class="form-group">
                         <label for="phone" data-trans="phone_number">Phone Number *</label>
-                        <input type="text" id="phone" placeholder="0796959546" required>
+                        <input type="text" id="phone" name="رقم الهاتف" placeholder="079*******" required>
                         <small style="color:var(--gray); font-size:12px;">Numbers only, no letters</small>
                     </div>
 
                     <div class="form-group">
                         <label for="email" data-trans="email_address">Email Address *</label>
-                        <input type="email" id="email" placeholder="example@email.com" required>
+                        <input type="email" id="email" name="البريد الإلكتروني" placeholder="example@email.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="serviceType" data-trans="service_type">Service Type *</label>
-                        <select id="serviceType" required>
+                        <select id="serviceType" name="نوع الخدمة" required>
                             <option value="" data-trans="select_service">-- Select Service --</option>
                             <option value="hardware" data-trans="service_hardware">Computer Maintenance (Hardware)</option>
                             <option value="networks" data-trans="service_networks">Network Installation</option>
@@ -87,13 +89,13 @@
 
                     <div class="form-group">
                         <label for="bookingDate" data-trans="preferred_date">Preferred Date (Month & Day only) *</label>
-                        <input type="text" id="bookingDate" placeholder="MM/DD" required>
+                        <input type="text" id="bookingDate" name="التاريخ المفضل" placeholder="MM/DD" required>
                         <small style="color:var(--gray); font-size:12px;">Format: MM/DD (e.g. 06/21)</small>
                     </div>
 
                     <div class="form-group">
                         <label for="bookingTime" data-trans="preferred_time">Preferred Time (Saturday & Monday only) *</label>
-                        <select id="bookingTime" required>
+                        <select id="bookingTime" name="الوقت المفضل" required>
                             <option value="" data-trans="select_time">-- Select Time --</option>
                             <option value="11:30">11:30 AM</option>
                             <option value="12:00">12:00 PM</option>
@@ -107,7 +109,7 @@
 
                     <div class="form-group">
                         <label for="notes" data-trans="additional_notes">Additional Notes</label>
-                        <textarea id="notes" placeholder="Any additional details you would like to add..."></textarea>
+                        <textarea id="notes" name="ملاحظات إضافية" placeholder="Any additional details you would like to add..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit" data-trans="confirm_booking">✅ Confirm Booking</button>
