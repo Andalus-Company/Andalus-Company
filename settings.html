@@ -9,11 +9,13 @@
 </head>
 <body>
 
-    <header class="header">
+    <div class="glass-bg"></div>
+
+    <header class="header glass-header">
         <div class="container">
             <div class="logo">
-                <img src="logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
-                <img src="logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
+                <img src="images/logo-ar.jpg" alt="شعار أندلس" class="logo-img logo-ar" onerror="this.style.display='none'">
+                <img src="images/logo-en.jpg" alt="Andalus Logo" class="logo-img logo-en" style="display:none;" onerror="this.style.display='none'">
                 <div class="logo-text">
                     <span class="logo-main logo-main-ar">ANDALUS</span>
                     <span class="logo-sub logo-sub-ar">TECHNOLOGIES</span>
@@ -47,7 +49,7 @@
     <section class="content-section">
         <div class="container">
             
-            <div class="settings-card">
+            <div class="settings-card glass-card">
                 <h2>🌐 <span data-trans="language">Language</span></h2>
                 <p data-trans="language_desc">Choose the language to display the site</p>
                 <div class="settings-options">
@@ -60,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="settings-card">
+            <div class="settings-card glass-card">
                 <h2>🎨 <span data-trans="colors">Colors</span></h2>
                 <p data-trans="colors_desc">Choose the primary color of the site</p>
                 <div class="color-picker-grid">
@@ -74,12 +76,12 @@
                     <button class="color-btn" style="background:#e65100;" onclick="setColor('#e65100')"></button>
                 </div>
                 <div style="margin-top:15px;">
-                    <label style="font-weight:600; display:block; margin-bottom:5px;" data-trans="custom_color">Custom Color:</label>
+                    <label style="font-weight:600; display:block; margin-bottom:5px; color:var(--text-color);" data-trans="custom_color">Custom Color:</label>
                     <input type="color" id="customColorPicker" value="#0a2b4e" onchange="setColor(this.value)">
                 </div>
             </div>
 
-            <div class="settings-card">
+            <div class="settings-card glass-card">
                 <h2>🌓 <span data-trans="theme">Theme</span></h2>
                 <p data-trans="theme_desc">Choose your preferred site mode</p>
                 <div class="settings-options">
@@ -93,7 +95,7 @@
             </div>
 
             <div style="text-align:center; margin-top:30px;">
-                <button class="btn-reset" onclick="resetSettings()">
+                <button class="btn-reset glass-card" onclick="resetSettings()">
                     🔄 <span data-trans="reset_settings">Reset Settings</span>
                 </button>
             </div>
@@ -101,10 +103,10 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer glass-footer">
         <div class="container">
             <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
-            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 079******* | ✉ info@andalus-tech.com</p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 +962 7 8691 1639 | ✉ techscieandalus3@gmail.com</p>
         </div>
     </footer>
 
