@@ -83,12 +83,32 @@ ul {
     gap: 12px;
 }
 
-.logo-img {
-    height: 50px;
+.logo-icon {
+    font-size: 36px;
     width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 168, 76, 0.15);
     border-radius: 50%;
-    object-fit: cover;
     border: 2px solid var(--secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    animation: logoPulse 3s ease-in-out infinite;
+}
+
+.logo-icon:hover {
+    transform: rotate(15deg) scale(1.15);
+    background: rgba(201, 168, 76, 0.3);
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
+}
+
+@keyframes logoPulse {
+    0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+    50% { box-shadow: 0 0 30px 5px rgba(201, 168, 76, 0.15); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
 }
 
 .logo-text {
@@ -1163,34 +1183,6 @@ body.dark-mode .glass-bg {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, var(--secondary) 60%, #0a0a0a 100%) !important;
 }
 
-.logo-icon {
-    font-size: 36px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(201, 168, 76, 0.15);
-    border-radius: 50%;
-    border: 2px solid var(--secondary);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
-    animation: logoPulse 3s ease-in-out infinite;
-}
-
-.logo-icon:hover {
-    transform: rotate(15deg) scale(1.15);
-    background: rgba(201, 168, 76, 0.3);
-    box-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
-}
-
-@keyframes logoPulse {
-    0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
-    50% { box-shadow: 0 0 30px 5px rgba(201, 168, 76, 0.15); }
-    100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
-}
-
 @media (max-width: 768px) {
     .logo-main {
         font-size: 14px;
@@ -1200,10 +1192,6 @@ body.dark-mode .glass-bg {
     }
     .logo-slogan {
         font-size: 8px;
-    }
-    .logo-img {
-        height: 35px;
-        width: 35px;
     }
     .logo-icon {
         font-size: 28px;
