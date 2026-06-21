@@ -42,6 +42,7 @@ body {
     line-height: 1.7;
     direction: rtl;
     transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
 }
 
 a {
@@ -282,7 +283,7 @@ ul {
 .features h2 {
     text-align: center;
     font-size: 36px;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 50px;
     transition: color 0.3s ease;
 }
@@ -316,7 +317,7 @@ ul {
 
 .feature-card h3 {
     font-size: 20px;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -335,7 +336,7 @@ ul {
 }
 
 .feature-card .card-link:hover {
-    color: var(--primary);
+    color: var(--white);
     transform: translateX(-5px);
 }
 
@@ -369,7 +370,7 @@ ul {
 
 .content-section h2 {
     font-size: 28px;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 20px;
     border-right: 5px solid var(--secondary);
     padding-right: 15px;
@@ -423,7 +424,7 @@ ul {
 }
 
 .service-card h3 {
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 20px;
     margin-bottom: 10px;
     transition: color 0.3s ease;
@@ -444,7 +445,7 @@ ul {
 }
 
 .service-card .btn-link:hover {
-    color: var(--primary);
+    color: var(--white);
     transform: translateX(-5px);
 }
 
@@ -465,7 +466,7 @@ ul {
 .booking-form label {
     display: block;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 5px;
     transition: color 0.3s ease;
 }
@@ -498,8 +499,8 @@ ul {
 }
 
 .booking-form .btn-submit {
-    background: var(--primary);
-    color: var(--white);
+    background: var(--secondary);
+    color: var(--primary);
     border: none;
     padding: 14px 40px;
     border-radius: 50px;
@@ -512,8 +513,8 @@ ul {
 }
 
 .booking-form .btn-submit:hover {
-    background: var(--secondary);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
     transform: scale(1.02);
 }
 
@@ -555,7 +556,7 @@ ul {
 
 .contact-info-header h2 {
     font-size: 22px;
-    color: var(--primary);
+    color: var(--secondary);
     margin: 0;
     border: none;
     padding: 0;
@@ -665,7 +666,7 @@ ul {
 
 .contact-form-header h2 {
     font-size: 22px;
-    color: var(--primary);
+    color: var(--secondary);
     margin: 0;
     border: none;
     padding: 0;
@@ -679,7 +680,7 @@ ul {
 .contact-form label {
     display: block;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 6px;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -713,8 +714,8 @@ ul {
 .contact-form .btn-send {
     width: 100%;
     padding: 15px;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--secondary);
+    color: var(--primary);
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -725,8 +726,8 @@ ul {
 }
 
 .contact-form .btn-send:hover {
-    background: var(--secondary);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
     transform: scale(1.02);
 }
 
@@ -761,7 +762,7 @@ ul {
 
 .settings-card h2 {
     font-size: 24px;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 10px;
     border-right: 5px solid var(--secondary);
     padding-right: 15px;
@@ -858,7 +859,7 @@ ul {
 }
 
 .btn-link:hover {
-    color: var(--primary);
+    color: var(--white);
     border-bottom-color: var(--secondary);
     transform: translateX(-5px);
 }
@@ -1015,6 +1016,181 @@ body.dark-mode .booking-form .btn-submit:hover {
     color: var(--white);
 }
 
+.glass-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 30%, var(--secondary) 60%, var(--primary) 100%);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    transition: background 0.5s ease;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass-header {
+    background: rgba(10, 43, 78, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.glass-footer {
+    background: rgba(10, 43, 78, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.glass-feature {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    transition: all 0.4s ease !important;
+}
+
+.glass-feature:hover {
+    transform: translateY(-8px) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(201, 168, 76, 0.15) !important;
+}
+
+.glass-hero {
+    background: rgba(10, 43, 78, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.glass-hero .btn {
+    background: rgba(201, 168, 76, 0.9) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.glass-hero .btn:hover {
+    background: rgba(201, 168, 76, 1) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 10px 40px rgba(201, 168, 76, 0.4) !important;
+}
+
+.glass-welcome {
+    background: rgba(10, 43, 78, 0.85) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.glass-welcome .close-welcome {
+    background: rgba(201, 168, 76, 0.9) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.glass-welcome .close-welcome:hover {
+    background: rgba(201, 168, 76, 1) !important;
+    transform: scale(1.05) !important;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border-radius: 20px !important;
+    transition: all 0.4s ease !important;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 40px rgba(201, 168, 76, 0.2) !important;
+}
+
+body.dark-mode .glass-header {
+    background: rgba(10, 10, 10, 0.8) !important;
+}
+
+body.dark-mode .glass-footer {
+    background: rgba(10, 10, 10, 0.8) !important;
+}
+
+body.dark-mode .glass-hero {
+    background: rgba(10, 10, 10, 0.7) !important;
+}
+
+body.dark-mode .glass-feature {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .glass-feature:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .glass-welcome {
+    background: rgba(10, 10, 10, 0.9) !important;
+}
+
+body.dark-mode .glass-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .glass-card:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .glass-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, var(--secondary) 60%, #0a0a0a 100%) !important;
+}
+
+.logo-icon {
+    font-size: 36px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 168, 76, 0.15);
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    animation: logoPulse 3s ease-in-out infinite;
+}
+
+.logo-icon:hover {
+    transform: rotate(15deg) scale(1.15);
+    background: rgba(201, 168, 76, 0.3);
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
+}
+
+@keyframes logoPulse {
+    0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+    50% { box-shadow: 0 0 30px 5px rgba(201, 168, 76, 0.15); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+}
+
 @media (max-width: 768px) {
     .logo-main {
         font-size: 14px;
@@ -1028,6 +1204,11 @@ body.dark-mode .booking-form .btn-submit:hover {
     .logo-img {
         height: 35px;
         width: 35px;
+    }
+    .logo-icon {
+        font-size: 28px;
+        width: 40px;
+        height: 40px;
     }
     .menu-toggle {
         display: flex;
