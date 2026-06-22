@@ -264,7 +264,7 @@ const translations = {
         service_type: 'نوع الخدمة *',
         select_service: '-- اختر الخدمة --',
         preferred_date: 'التاريخ المفضل (شهر/يوم فقط) *',
-        preferred_time: 'الوقت المفضل (السبت والأثنين فقط) *',
+        preferred_time: 'الوقت المفضل (10:00 ص - 2:00 م) *',
         select_time: '-- اختر الوقت --',
         additional_notes: 'ملاحظات إضافية',
         confirm_booking: '✅ تأكيد الحجز',
@@ -362,7 +362,10 @@ const translations = {
         icdl_cert_li2: '✅ تزيد من فرصك في الحصول على وظيفة.',
         icdl_cert_li3: '✅ تثبت كفاءتك في استخدام الحاسوب.',
         icdl_cert_li4: '✅ مطلوبة في معظم الوظائف الإدارية والمكتبية.',
-        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.'
+        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.',
+        thanks_title: 'شكراً لك!',
+        thanks_desc: 'تم استلام طلبك بنجاح. سوف نتواصل معك في أقرب وقت.',
+        thanks_back: 'العودة إلى الرئيسية'
     },
     en: {
         home: 'Home',
@@ -483,7 +486,7 @@ const translations = {
         service_type: 'Service Type *',
         select_service: '-- Select Service --',
         preferred_date: 'Preferred Date (Month/Day only) *',
-        preferred_time: 'Preferred Time (Saturday & Monday only) *',
+        preferred_time: 'Preferred Time (10:00 AM - 2:00 PM) *',
         select_time: '-- Select Time --',
         additional_notes: 'Additional Notes',
         confirm_booking: '✅ Confirm Booking',
@@ -581,7 +584,10 @@ const translations = {
         icdl_cert_li2: '✅ Increases your chances of getting a job.',
         icdl_cert_li3: '✅ Proves your computer proficiency.',
         icdl_cert_li4: '✅ Required in most administrative and office jobs.',
-        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.'
+        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.',
+        thanks_title: 'Thank You!',
+        thanks_desc: 'Your request has been received successfully. We will contact you as soon as possible.',
+        thanks_back: 'Back to Home'
     }
 };
 
