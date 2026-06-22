@@ -83,32 +83,18 @@ ul {
     gap: 12px;
 }
 
-.logo-icon {
-    font-size: 36px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(201, 168, 76, 0.15);
+.logo-img {
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
+    object-fit: cover;
     border: 2px solid var(--secondary);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
-    animation: logoPulse 3s ease-in-out infinite;
+    transition: all 0.3s ease;
 }
 
-.logo-icon:hover {
-    transform: rotate(15deg) scale(1.15);
-    background: rgba(201, 168, 76, 0.3);
-    box-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
-}
-
-@keyframes logoPulse {
-    0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
-    50% { box-shadow: 0 0 30px 5px rgba(201, 168, 76, 0.15); }
-    100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+.logo-img:hover {
+    transform: rotate(10deg) scale(1.05);
+    border-color: var(--secondary);
 }
 
 .logo-text {
@@ -1143,6 +1129,15 @@ body.dark-mode .booking-form .btn-submit:hover {
     box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 40px rgba(201, 168, 76, 0.2) !important;
 }
 
+.welcome-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary);
+    margin-bottom: 15px;
+}
+
 body.dark-mode .glass-header {
     background: rgba(10, 10, 10, 0.8) !important;
 }
@@ -1183,6 +1178,10 @@ body.dark-mode .glass-bg {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, var(--secondary) 60%, #0a0a0a 100%) !important;
 }
 
+body.dark-mode .welcome-logo {
+    border-color: var(--secondary);
+}
+
 @media (max-width: 768px) {
     .logo-main {
         font-size: 14px;
@@ -1193,10 +1192,9 @@ body.dark-mode .glass-bg {
     .logo-slogan {
         font-size: 8px;
     }
-    .logo-icon {
-        font-size: 28px;
-        width: 40px;
-        height: 40px;
+    .logo-img {
+        height: 35px;
+        width: 35px;
     }
     .menu-toggle {
         display: flex;
@@ -1267,6 +1265,10 @@ body.dark-mode .glass-bg {
     .color-picker-grid {
         justify-content: center;
     }
+    .welcome-logo {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1290,5 +1292,9 @@ body.dark-mode .glass-bg {
     }
     .contact-item-text span {
         font-size: 14px;
+    }
+    .welcome-logo {
+        width: 50px;
+        height: 50px;
     }
 }
