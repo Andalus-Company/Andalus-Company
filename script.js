@@ -38,55 +38,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const bookingForm = document.getElementById('bookingForm');
-    const bookingMessage = document.getElementById('bookingMessage');
 
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             const fullName = document.getElementById('fullName').value.trim();
             const nameWords = fullName.split(/\s+/);
 
             if (nameWords.length !== 4) {
+                e.preventDefault();
                 showBookingMessage('❌ Please enter exactly 4 words for your full name.', 'error');
                 return;
             }
 
             const phone = document.getElementById('phone').value.trim();
             if (!/^\d+$/.test(phone)) {
+                e.preventDefault();
                 showBookingMessage('❌ Phone number must contain numbers only.', 'error');
                 return;
             }
 
             const email = document.getElementById('email').value.trim();
             if (!email) {
+                e.preventDefault();
                 showBookingMessage('❌ Please enter your email address.', 'error');
                 return;
             }
 
             const service = document.getElementById('serviceType').value;
             if (!service) {
+                e.preventDefault();
                 showBookingMessage('❌ Please select a service type.', 'error');
                 return;
             }
 
             const date = document.getElementById('bookingDate').value.trim();
             if (!/^\d{2}\/\d{2}$/.test(date)) {
+                e.preventDefault();
                 showBookingMessage('❌ Please enter date in format MM/DD (e.g. 06/21).', 'error');
                 return;
             }
 
             const time = document.getElementById('bookingTime').value;
             if (!time) {
+                e.preventDefault();
                 showBookingMessage('❌ Please select a preferred time.', 'error');
                 return;
             }
-
-            const notes = document.getElementById('notes').value.trim();
-
-            console.log('Booking Data:', { fullName, phone, email, service, date, time, notes });
-            showBookingMessage('✅ Your booking has been confirmed! We will contact you within 24 hours.', 'success');
-            bookingForm.reset();
         });
     }
 
@@ -108,21 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             const name = document.getElementById('contactName').value.trim();
             const email = document.getElementById('contactEmailInput').value.trim();
             const subject = document.getElementById('contactSubject').value.trim();
             const message = document.getElementById('contactMessage').value.trim();
 
             if (!name || !email || !subject || !message) {
+                e.preventDefault();
                 showContactStatus('❌ Please fill in all required fields.', 'error');
                 return;
             }
-
-            console.log('Contact Data:', { name, email, subject, message });
-            showContactStatus('✅ Your message has been sent! We will reply as soon as possible.', 'success');
-            contactForm.reset();
         });
     }
 
