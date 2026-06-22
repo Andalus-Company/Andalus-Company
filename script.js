@@ -335,7 +335,34 @@ const translations = {
         service_icdl_booking: 'دورة ICDL',
         service_support: 'دعم فني للشركات',
         service_cleaning: 'تنظيف أجهزة',
-        service_other: 'خدمة أخرى'
+        service_other: 'خدمة أخرى',
+        icdl_page_title: 'ICDL - الرخصة الدولية لقيادة الحاسوب',
+        icdl_page_desc: 'دورة متكاملة لتعلم مهارات الحاسوب الأساسية والمعترف بها دولياً',
+        icdl_about_title: '📖 عن دورة ICDL',
+        icdl_about_desc: 'دورة ICDL (الرخصة الدولية لقيادة الحاسوب) هي دورة تدريبية متكاملة تهدف إلى تمكين الأفراد من اكتساب المهارات الأساسية في استخدام الحاسوب وتطبيقاته المختلفة. تعتبر هذه الشهادة معترف بها دولياً وتفتح آفاقاً واسعة في سوق العمل.',
+        icdl_about_desc2: 'تغطي الدورة جميع الجوانب الأساسية لاستخدام الحاسوب، بدءاً من المفاهيم الأساسية وصولاً إلى المهارات المتقدمة في معالجة النصوص، جداول البيانات، العروض التقديمية، وقواعد البيانات.',
+        icdl_modules_title: '📚 وحدات ICDL السبع',
+        icdl_module1: 'الوحدة 1: مفاهيم تكنولوجيا المعلومات',
+        icdl_module1_desc: 'تعريف الحاسوب، مكوناته الأساسية، أنواع البرامج، أنظمة التشغيل، وأساسيات الشبكات والإنترنت.',
+        icdl_module2: 'الوحدة 2: استخدام الحاسوب وإدارة الملفات',
+        icdl_module2_desc: 'استخدام سطح المكتب، إدارة الملفات والمجلدات، الضغط والفك، والبحث عن الملفات.',
+        icdl_module3: 'الوحدة 3: معالجة النصوص (Word Processing)',
+        icdl_module3_desc: 'إنشاء وتنسيق المستندات، إدراج الصور والجداول، التدقيق الإملائي، وطباعة المستندات باستخدام برنامج Microsoft Word.',
+        icdl_module4: 'الوحدة 4: جداول البيانات (Spreadsheets)',
+        icdl_module4_desc: 'إنشاء وتنسيق الجداول، استخدام الصيغ والدوال، إنشاء الرسوم البيانية، وتحليل البيانات باستخدام Microsoft Excel.',
+        icdl_module5: 'الوحدة 5: قواعد البيانات (Databases)',
+        icdl_module5_desc: 'مفاهيم قواعد البيانات، إنشاء الجداول والاستعلامات، إدخال البيانات، وإنشاء التقارير باستخدام Microsoft Access.',
+        icdl_module6: 'الوحدة 6: العروض التقديمية (Presentations)',
+        icdl_module6_desc: 'إنشاء وتنسيق العروض التقديمية، إدراج الصور والرسوم البيانية، إضافة التأثيرات، وتقديم العروض باستخدام Microsoft PowerPoint.',
+        icdl_module7: 'الوحدة 7: مهارات الإنترنت والبريد الإلكتروني',
+        icdl_module7_desc: 'استخدام متصفحات الإنترنت، البحث عن المعلومات، استخدام البريد الإلكتروني، وإدارة جهات الاتصال والمراسلات.',
+        icdl_register: '📅 سجل الآن في دورة ICDL',
+        icdl_cert_title: '🏅 مميزات شهادة ICDL',
+        icdl_cert_li1: '✅ معترف بها دولياً في أكثر من 150 دولة.',
+        icdl_cert_li2: '✅ تزيد من فرصك في الحصول على وظيفة.',
+        icdl_cert_li3: '✅ تثبت كفاءتك في استخدام الحاسوب.',
+        icdl_cert_li4: '✅ مطلوبة في معظم الوظائف الإدارية والمكتبية.',
+        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.'
     },
     en: {
         home: 'Home',
@@ -527,7 +554,34 @@ const translations = {
         service_icdl_booking: 'ICDL Course',
         service_support: 'Technical Support for Companies',
         service_cleaning: 'Device Cleaning',
-        service_other: 'Other Service'
+        service_other: 'Other Service',
+        icdl_page_title: 'ICDL - International Computer Driving License',
+        icdl_page_desc: 'Comprehensive course to learn basic computer skills recognized internationally',
+        icdl_about_title: '📖 About ICDL Course',
+        icdl_about_desc: 'The ICDL (International Computer Driving License) course is an integrated training program designed to empower individuals with essential computer skills and various applications. This internationally recognized certificate opens wide opportunities in the job market.',
+        icdl_about_desc2: 'The course covers all essential aspects of computer use, from basic concepts to advanced skills in word processing, spreadsheets, presentations, and databases.',
+        icdl_modules_title: '📚 ICDL 7 Modules',
+        icdl_module1: 'Module 1: IT Fundamentals',
+        icdl_module1_desc: 'Computer definition, basic components, software types, operating systems, and networking and internet basics.',
+        icdl_module2: 'Module 2: Computers and Files Management',
+        icdl_module2_desc: 'Using the desktop, managing files and folders, compression and extraction, and file searching.',
+        icdl_module3: 'Module 3: Word Processing',
+        icdl_module3_desc: 'Creating and formatting documents, inserting images and tables, spell checking, and printing documents using Microsoft Word.',
+        icdl_module4: 'Module 4: Spreadsheets',
+        icdl_module4_desc: 'Creating and formatting tables, using formulas and functions, creating charts, and data analysis using Microsoft Excel.',
+        icdl_module5: 'Module 5: Databases',
+        icdl_module5_desc: 'Database concepts, creating tables and queries, data entry, and generating reports using Microsoft Access.',
+        icdl_module6: 'Module 6: Presentations',
+        icdl_module6_desc: 'Creating and formatting presentations, inserting images and charts, adding effects, and delivering presentations using Microsoft PowerPoint.',
+        icdl_module7: 'Module 7: Internet and Email Skills',
+        icdl_module7_desc: 'Using web browsers, searching for information, using email, and managing contacts and correspondence.',
+        icdl_register: '📅 Register Now for ICDL Course',
+        icdl_cert_title: '🏅 ICDL Certificate Benefits',
+        icdl_cert_li1: '✅ Recognized internationally in over 150 countries.',
+        icdl_cert_li2: '✅ Increases your chances of getting a job.',
+        icdl_cert_li3: '✅ Proves your computer proficiency.',
+        icdl_cert_li4: '✅ Required in most administrative and office jobs.',
+        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.'
     }
 };
 
@@ -551,8 +605,8 @@ function applyLanguage(lang) {
 }
 
 function applyLogo(lang) {
-    const logoAr = document.querySelectorAll('.logo-main-ar, .logo-sub-ar, .logo-slogan-ar');
-    const logoEn = document.querySelectorAll('.logo-main-en, .logo-sub-en, .logo-slogan-en');
+    const logoAr = document.querySelectorAll('.logo-ar');
+    const logoEn = document.querySelectorAll('.logo-en');
 
     if (lang === 'en') {
         logoAr.forEach(el => el.style.display = 'none');
