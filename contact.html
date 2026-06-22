@@ -48,91 +48,40 @@
 
     <section class="content-section">
         <div class="container">
-            <div class="contact-wrapper">
+            <div class="booking-form glass-card">
+                
+                <form id="contactForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="📩 رسالة جديدة من موقع أندلس التقنية">
 
-                <div class="contact-info-card glass-card">
-                    <div class="contact-info-header">
-                        <span class="contact-info-icon">📌</span>
-                        <h2 data-trans="contact_info">Contact Information</h2>
+                    <h2 style="text-align:center; color:var(--secondary); margin-bottom:25px;" data-trans="send_message">✉️ Send a Message</h2>
+                    
+                    <div class="form-group">
+                        <label for="contactName" data-trans="full_name">Full Name *</label>
+                        <input type="text" id="contactName" name="الاسم الكامل" placeholder="Enter your name" required>
                     </div>
-                    <div class="contact-info-body">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
-                            <div class="contact-item-text">
-                                <strong data-trans="address">Address:</strong>
-                                <span data-trans="jordan">Jordan</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🗺️</div>
-                            <div class="contact-item-text">
-                                <strong data-trans="location">Location:</strong>
-                                <span>32°05'22.1"N 36°05'37.3"E</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📞</div>
-                            <div class="contact-item-text">
-                                <strong>Phone:</strong>
-                                <span>+962 7 8691 1639</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📧</div>
-                            <div class="contact-item-text">
-                                <strong>Email:</strong>
-                                <span>techscieandalus3@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🕒</div>
-                            <div class="contact-item-text">
-                                <strong data-trans="working_hours">Working Hours:</strong>
-                                <span data-trans="working_hours_text">Saturday – Thursday 10:00 AM – 2:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-map-btn">
-                        <a href="https://www.google.com/maps?q=32.089472,36.093694" target="_blank" data-trans="view_map">
-                            🗺️ View on Google Maps ←
-                        </a>
-                    </div>
-                </div>
 
-                <div class="contact-form-card glass-card">
-                    <div class="contact-form-header">
-                        <span class="contact-form-icon">✉️</span>
-                        <h2 data-trans="send_message">Send a Message</h2>
+                    <div class="form-group">
+                        <label for="contactEmailInput" data-trans="email_address">Email Address *</label>
+                        <input type="email" id="contactEmailInput" name="البريد الإلكتروني" placeholder="example@email.com" required>
                     </div>
-                    <form id="contactForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
-                        
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_subject" value="📩 رسالة جديدة من موقع أندلس التقنية">
 
-                        <div class="form-group">
-                            <label for="contactName" data-trans="full_name">Full Name *</label>
-                            <input type="text" id="contactName" name="الاسم الكامل" placeholder="Enter your name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmailInput" data-trans="email_address">Email Address *</label>
-                            <input type="email" id="contactEmailInput" name="البريد الإلكتروني" placeholder="example@email.com" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactSubject" data-trans="subject">Subject *</label>
-                            <input type="text" id="contactSubject" name="الموضوع" placeholder="Message subject" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage" data-trans="message">Message *</label>
-                            <textarea id="contactMessage" name="الرسالة" placeholder="Write your message here..." class="form-textarea" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-send" data-trans="send_btn">
-                            📤 Send Message
-                        </button>
-                    </form>
-                    <div id="contactMessageStatus" class="contact-status" style="display:none;"></div>
-                </div>
+                    <div class="form-group">
+                        <label for="contactSubject" data-trans="subject">Subject *</label>
+                        <input type="text" id="contactSubject" name="الموضوع" placeholder="Message subject" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="contactMessage" data-trans="message">Message *</label>
+                        <textarea id="contactMessage" name="الرسالة" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" data-trans="send_btn">📤 Send Message</button>
+                </form>
+                
+                <div id="contactMessageStatus" style="margin-top:20px; text-align:center; display:none;"></div>
             </div>
         </div>
     </section>
