@@ -104,12 +104,11 @@
                         <span class="contact-form-icon">✉️</span>
                         <h2 data-trans="send_message">Send a Message</h2>
                     </div>
-                    <form action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
                         
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_subject" value="📩 رسالة جديدة من موقع أندلس التقنية">
-                        <input type="hidden" name="_next" value="https://Andalus-Company.github.io/index.html">
 
                         <div class="form-group">
                             <label for="contactName" data-trans="full_name">Full Name *</label>
@@ -132,6 +131,14 @@
                         </button>
                     </form>
                     <div id="contactMessageStatus" class="contact-status" style="display:none;"></div>
+
+                    <!-- رسالة النجاح مع زر العودة -->
+                    <div id="successMessageContact" style="margin-top:20px; text-align:center; display:none;">
+                        <div style="font-size:50px; margin-bottom:10px;">✅</div>
+                        <h3 style="color:var(--secondary);" data-trans="success_title">تم إرسال رسالتك بنجاح!</h3>
+                        <p style="color:var(--gray);" data-trans="success_desc">سوف نتواصل معك في أقرب وقت.</p>
+                        <a href="index.html" class="btn" style="margin-top:15px; display:inline-block;" data-trans="back_home">العودة إلى الرئيسية</a>
+                    </div>
                 </div>
 
             </div>
