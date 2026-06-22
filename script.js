@@ -37,58 +37,83 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ====== نموذج الحجز ======
     const bookingForm = document.getElementById('bookingForm');
+    const bookingMessage = document.getElementById('bookingMessage');
+    const successMessage = document.getElementById('successMessage');
 
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
             const fullName = document.getElementById('fullName').value.trim();
             const nameWords = fullName.split(/\s+/);
 
             if (nameWords.length !== 4) {
-                e.preventDefault();
                 showBookingMessage('❌ Please enter exactly 4 words for your full name.', 'error');
                 return;
             }
 
             const phone = document.getElementById('phone').value.trim();
             if (!/^\d+$/.test(phone)) {
-                e.preventDefault();
                 showBookingMessage('❌ Phone number must contain numbers only.', 'error');
                 return;
             }
 
             const email = document.getElementById('email').value.trim();
             if (!email) {
-                e.preventDefault();
                 showBookingMessage('❌ Please enter your email address.', 'error');
                 return;
             }
 
             const service = document.getElementById('serviceType').value;
             if (!service) {
-                e.preventDefault();
                 showBookingMessage('❌ Please select a service type.', 'error');
                 return;
             }
 
             const date = document.getElementById('bookingDate').value.trim();
             if (!/^\d{2}\/\d{2}$/.test(date)) {
-                e.preventDefault();
                 showBookingMessage('❌ Please enter date in format MM/DD (e.g. 06/21).', 'error');
                 return;
             }
 
             const time = document.getElementById('bookingTime').value;
             if (!time) {
-                e.preventDefault();
                 showBookingMessage('❌ Please select a preferred time.', 'error');
                 return;
             }
+
+            // إخفاء رسائل الخطأ وإظهار رسالة النجاح
+            if (bookingMessage) {
+                bookingMessage.style.display = 'none';
+            }
+
+            // إرسال البيانات عبر Fetch إلى FormSubmit
+            const formData = new FormData(bookingForm);
+
+            fetch('https://formsubmit.co/techscieandalus3@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    // إخفاء الفورم وإظهار رسالة النجاح
+                    bookingForm.style.display = 'none';
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                    }
+                } else {
+                    showBookingMessage('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                }
+            })
+            .catch(function(error) {
+                showBookingMessage('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+            });
         });
     }
 
     function showBookingMessage(text, type) {
-        const bookingMessage = document.getElementById('bookingMessage');
         if (bookingMessage) {
             bookingMessage.style.display = 'block';
             bookingMessage.style.color = type === 'success' ? '#2e7d32' : '#d32f2f';
@@ -100,21 +125,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // ====== نموذج التواصل ======
     const contactForm = document.getElementById('contactForm');
     const contactStatus = document.getElementById('contactMessageStatus');
+    const successMessageContact = document.getElementById('successMessageContact');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
             const name = document.getElementById('contactName').value.trim();
             const email = document.getElementById('contactEmailInput').value.trim();
             const subject = document.getElementById('contactSubject').value.trim();
             const message = document.getElementById('contactMessage').value.trim();
 
             if (!name || !email || !subject || !message) {
-                e.preventDefault();
                 showContactStatus('❌ Please fill in all required fields.', 'error');
                 return;
             }
+
+            // إخفاء رسائل الخطأ
+            if (contactStatus) {
+                contactStatus.style.display = 'none';
+            }
+
+            // إرسال البيانات عبر Fetch إلى FormSubmit
+            const formData = new FormData(contactForm);
+
+            fetch('https://formsubmit.co/techscieandalus3@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    // إخفاء الفورم وإظهار رسالة النجاح
+                    contactForm.style.display = 'none';
+                    if (successMessageContact) {
+                        successMessageContact.style.display = 'block';
+                    }
+                } else {
+                    showContactStatus('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                }
+            })
+            .catch(function(error) {
+                showContactStatus('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+            });
         });
     }
 
@@ -354,7 +409,10 @@ const translations = {
         icdl_cert_li2: '✅ تزيد من فرصك في الحصول على وظيفة.',
         icdl_cert_li3: '✅ تثبت كفاءتك في استخدام الحاسوب.',
         icdl_cert_li4: '✅ مطلوبة في معظم الوظائف الإدارية والمكتبية.',
-        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.'
+        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.',
+        success_title: 'تم إرسال طلبك بنجاح!',
+        success_desc: 'سوف نتواصل معك في أقرب وقت.',
+        back_home: 'العودة إلى الرئيسية'
     },
     en: {
         home: 'Home',
@@ -573,7 +631,10 @@ const translations = {
         icdl_cert_li2: '✅ Increases your chances of getting a job.',
         icdl_cert_li3: '✅ Proves your computer proficiency.',
         icdl_cert_li4: '✅ Required in most administrative and office jobs.',
-        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.'
+        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.',
+        success_title: 'Your request has been sent successfully!',
+        success_desc: 'We will contact you as soon as possible.',
+        back_home: 'Back to Home'
     }
 };
 
