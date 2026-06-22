@@ -49,67 +49,74 @@
     <section class="content-section">
         <div class="container">
             <div class="booking-form glass-card">
-                <!-- تم ربط النموذج بخدمة FormSubmit المجانية وتوجيهه إلى بريدك الرسمي مباشرة -->
-                <form id="bookingForm" action="https://formsubmit.co" method="POST">
+                <form id="bookingForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="📋 طلب حجز جديد من موقع أندلس التقنية">
+
                     <h2 style="text-align:center; color:var(--secondary); margin-bottom:25px;" data-trans="booking_form_title">📋 Booking Form</h2>
                     
                     <div class="form-group">
                         <label for="fullName" data-trans="full_name">Full Name (4 words only) *</label>
-                        <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name (4 words)" required>
+                        <input type="text" id="fullName" name="الاسم الكامل" placeholder="Enter your full name (4 words)" required>
                         <small style="color:var(--gray); font-size:12px;">Please enter exactly 4 words</small>
                     </div>
 
                     <div class="form-group">
                         <label for="phone" data-trans="phone_number">Phone Number *</label>
-                        <input type="text" id="phone" name="Phone Number" placeholder="079*******" required>
+                        <input type="text" id="phone" name="رقم الهاتف" placeholder="079*******" required>
                         <small style="color:var(--gray); font-size:12px;">Numbers only, no letters</small>
                     </div>
 
                     <div class="form-group">
                         <label for="email" data-trans="email_address">Email Address *</label>
-                        <input type="email" id="email" name="Email Address" placeholder="example@email.com" required>
+                        <input type="email" id="email" name="البريد الإلكتروني" placeholder="example@email.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="serviceType" data-trans="service_type">Service Type *</label>
-                        <select id="serviceType" name="Service Type" required>
+                        <select id="serviceType" name="نوع الخدمة" required>
                             <option value="" data-trans="select_service">-- Select Service --</option>
-                            <option value="hardware" data-trans="service_hardware">Computer Maintenance (Hardware)</option>
-                            <option value="networks" data-trans="service_networks">Network Installation</option>
-                            <option value="ai" data-trans="service_ai">AI Course</option>
-                            <option value="technology" data-trans="service_tech">Modern Technology Course</option>
-                            <option value="it" data-trans="service_it">IT Course</option>
-                            <option value="cybersecurity" data-trans="service_cyber">Cybersecurity Course</option>
-                            <option value="icdl" data-trans="service_icdl">ICDL Course</option>
-                            <option value="support" data-trans="service_support">Technical Support for Companies</option>
-                            <option value="cleaning" data-trans="service_cleaning">Device Cleaning</option>
-                            <option value="other" data-trans="service_other">Other Service</option>
+                            <option value="Computer Maintenance (Hardware)" data-trans="service_hardware">Computer Maintenance (Hardware)</option>
+                            <option value="Network Installation" data-trans="service_networks">Network Installation</option>
+                            <option value="AI Course" data-trans="service_ai">AI Course</option>
+                            <option value="Modern Technology Course" data-trans="service_tech">Modern Technology Course</option>
+                            <option value="IT Course" data-trans="service_it">IT Course</option>
+                            <option value="Cybersecurity Course" data-trans="service_cyber">Cybersecurity Course</option>
+                            <option value="ICDL Course" data-trans="service_icdl">ICDL Course</option>
+                            <option value="Technical Support for Companies" data-trans="service_support">Technical Support for Companies</option>
+                            <option value="Device Cleaning" data-trans="service_cleaning">Device Cleaning</option>
+                            <option value="Other Service" data-trans="service_other">Other Service</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="bookingDate" data-trans="preferred_date">Preferred Date (Month & Day only) *</label>
-                        <input type="text" id="bookingDate" name="Preferred Date" placeholder="MM/DD" required>
+                        <input type="text" id="bookingDate" name="التاريخ المفضل" placeholder="MM/DD" required>
                         <small style="color:var(--gray); font-size:12px;">Format: MM/DD (e.g. 06/21)</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="bookingTime" data-trans="preferred_time">Preferred Time (Saturday & Monday only) *</label>
-                        <select id="bookingTime" name="Preferred Time" required>
+                        <label for="bookingTime" data-trans="preferred_time">Preferred Time (10:00 AM - 2:00 PM) *</label>
+                        <select id="bookingTime" name="الوقت المفضل" required>
                             <option value="" data-trans="select_time">-- Select Time --</option>
-                            <option value="11:30">11:30 AM</option>
-                            <option value="12:00">12:00 PM</option>
-                            <option value="12:30">12:30 PM</option>
-                            <option value="1:00">1:00 PM</option>
-                            <option value="1:30">1:30 PM</option>
-                            <option value="2:00">2:00 PM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="1:30 PM">1:30 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
                         </select>
-                        <small style="color:var(--gray); font-size:12px;">Available on Saturdays and Mondays only</small>
+                        <small style="color:var(--gray); font-size:12px;">Available from 10:00 AM to 2:00 PM</small>
                     </div>
 
                     <div class="form-group">
                         <label for="notes" data-trans="additional_notes">Additional Notes</label>
-                        <textarea id="notes" name="Additional Notes" placeholder="Any additional details you would like to add..."></textarea>
+                        <textarea id="notes" name="ملاحظات إضافية" placeholder="Any additional details you would like to add..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit" data-trans="confirm_booking">✅ Confirm Booking</button>
@@ -122,7 +129,7 @@
     <footer class="footer glass-footer">
         <div class="container">
             <p>© 2026 <strong data-trans="company_footer">Andalus Scientific Technology</strong> - <span data-trans="all_rights">All Rights Reserved</span></p>
-            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 +962 7 8691 1639 | 📞 0796959546  | ✉ techscieandalus3@gmail.com</p>
+            <p style="font-size:14px; opacity:0.7;">📍 Jordan | 📞 +962 7 8691 1639 | 📞 0796959546 | ✉ techscieandalus3@gmail.com</p>
         </div>
     </footer>
 
