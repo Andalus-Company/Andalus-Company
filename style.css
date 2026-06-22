@@ -1298,3 +1298,29 @@ body.dark-mode .welcome-logo {
         height: 50px;
     }
 }
+#successMessage,
+#successMessageContact {
+    animation: fadeInUp 0.6s ease;
+}
+
+#successMessage .btn,
+#successMessageContact .btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: var(--transition);
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+}
+
+#successMessage .btn:hover,
+#successMessageContact .btn:hover {
+    background: transparent;
+    color: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.3);
+}
