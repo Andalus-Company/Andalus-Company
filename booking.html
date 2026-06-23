@@ -50,7 +50,7 @@
         <div class="container">
             <div class="booking-form glass-card">
                 
-                <form id="bookingForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                <form action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
                     
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
@@ -60,68 +60,16 @@
                     <h2 style="text-align:center; color:var(--secondary); margin-bottom:25px;" data-trans="booking_form_title">📋 Booking Form</h2>
                     
                     <div class="form-group">
-                        <label for="fullName" data-trans="full_name">Full Name (4 words only) *</label>
-                        <input type="text" id="fullName" name="الاسم الكامل" placeholder="Enter your full name (4 words)" required>
-                        <small style="color:var(--gray); font-size:12px;">Please enter exactly 4 words</small>
+                        <label for="fullName">Your Name *</label>
+                        <input type="text" id="fullName" name="الاسم الكامل" placeholder="Your Name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone" data-trans="phone_number">Phone Number *</label>
-                        <input type="text" id="phone" name="رقم الهاتف" placeholder="079*******" required>
-                        <small style="color:var(--gray); font-size:12px;">Numbers only, no letters</small>
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" name="البريد الإلكتروني" placeholder="Your Email" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email" data-trans="email_address">Email Address *</label>
-                        <input type="email" id="email" name="البريد الإلكتروني" placeholder="example@email.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="serviceType" data-trans="service_type">Service Type *</label>
-                        <select id="serviceType" name="نوع الخدمة" required>
-                            <option value="" data-trans="select_service">-- Select Service --</option>
-                            <option value="Computer Maintenance (Hardware)" data-trans="service_hardware">Computer Maintenance (Hardware)</option>
-                            <option value="Network Installation" data-trans="service_networks">Network Installation</option>
-                            <option value="AI Course" data-trans="service_ai">AI Course</option>
-                            <option value="Modern Technology Course" data-trans="service_tech">Modern Technology Course</option>
-                            <option value="IT Course" data-trans="service_it">IT Course</option>
-                            <option value="Cybersecurity Course" data-trans="service_cyber">Cybersecurity Course</option>
-                            <option value="ICDL Course" data-trans="service_icdl">ICDL Course</option>
-                            <option value="Technical Support for Companies" data-trans="service_support">Technical Support for Companies</option>
-                            <option value="Device Cleaning" data-trans="service_cleaning">Device Cleaning</option>
-                            <option value="Other Service" data-trans="service_other">Other Service</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="bookingDate" data-trans="preferred_date">Preferred Date (Month & Day only) *</label>
-                        <input type="text" id="bookingDate" name="التاريخ المفضل" placeholder="MM/DD" required>
-                        <small style="color:var(--gray); font-size:12px;">Format: MM/DD (e.g. 06/21)</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="bookingTime" data-trans="preferred_time">Preferred Time (10:00 AM - 2:00 PM) *</label>
-                        <select id="bookingTime" name="الوقت المفضل" required>
-                            <option value="" data-trans="select_time">-- Select Time --</option>
-                            <option value="10:00 AM">10:00 AM</option>
-                            <option value="10:30 AM">10:30 AM</option>
-                            <option value="11:00 AM">11:00 AM</option>
-                            <option value="11:30 AM">11:30 AM</option>
-                            <option value="12:00 PM">12:00 PM</option>
-                            <option value="12:30 PM">12:30 PM</option>
-                            <option value="1:00 PM">1:00 PM</option>
-                            <option value="1:30 PM">1:30 PM</option>
-                            <option value="2:00 PM">2:00 PM</option>
-                        </select>
-                        <small style="color:var(--gray); font-size:12px;">Available from 10:00 AM to 2:00 PM</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="notes" data-trans="additional_notes">Additional Notes</label>
-                        <textarea id="notes" name="ملاحظات إضافية" placeholder="Any additional details you would like to add..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit" data-trans="confirm_booking">✅ Confirm Booking</button>
+                    <button type="submit" class="btn-submit">Send</button>
                 </form>
                 
                 <div id="bookingMessage" style="margin-top:20px; text-align:center; display:none;"></div>
