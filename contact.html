@@ -104,9 +104,13 @@
                         <span class="contact-form-icon">✉️</span>
                         <h2 data-trans="send_message">Send a Message</h2>
                     </div>
-                    <form action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
-                        <button type="submit">Send</button>
-                    </form>
+                    <form id="contactForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                        
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="📩 رسالة جديدة من موقع أندلس التقنية">
+                        <input type="hidden" name="_next" value="https://Andalus-Company.github.io/index.html">
+
                         <div class="form-group">
                             <label for="contactName" data-trans="full_name">Full Name *</label>
                             <input type="text" id="contactName" name="الاسم الكامل" placeholder="Enter your name" class="form-input" required>
