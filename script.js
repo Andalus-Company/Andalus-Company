@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ====== نموذج الحجز ======
     const bookingForm = document.getElementById('bookingForm');
     const bookingMessage = document.getElementById('bookingMessage');
-    const successMessage = document.getElementById('successMessage');
 
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // إخفاء رسائل الخطأ وإظهار رسالة النجاح
+            // إخفاء رسائل الخطأ
             if (bookingMessage) {
                 bookingMessage.style.display = 'none';
             }
@@ -98,17 +97,14 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(function(response) {
                 if (response.ok) {
-                    // إخفاء الفورم وإظهار رسالة النجاح
-                    bookingForm.style.display = 'none';
-                    if (successMessage) {
-                        successMessage.style.display = 'block';
-                    }
+                    showBookingMessage('✅ Your booking has been confirmed! We will contact you within 24 hours.', 'success');
+                    bookingForm.reset();
                 } else {
-                    showBookingMessage('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                    showBookingMessage('❌ Something went wrong. Please try again.', 'error');
                 }
             })
             .catch(function(error) {
-                showBookingMessage('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                showBookingMessage('❌ Something went wrong. Please try again.', 'error');
             });
         });
     }
@@ -125,10 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ====== نموذج التواصل ======
+    // ====== نموذج تواصل معنا ======
     const contactForm = document.getElementById('contactForm');
     const contactStatus = document.getElementById('contactMessageStatus');
-    const successMessageContact = document.getElementById('successMessageContact');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -158,17 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(function(response) {
                 if (response.ok) {
-                    // إخفاء الفورم وإظهار رسالة النجاح
-                    contactForm.style.display = 'none';
-                    if (successMessageContact) {
-                        successMessageContact.style.display = 'block';
-                    }
+                    showContactStatus('✅ Your message has been sent successfully! We will contact you soon.', 'success');
+                    contactForm.reset();
                 } else {
-                    showContactStatus('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                    showContactStatus('❌ Something went wrong. Please try again.', 'error');
                 }
             })
             .catch(function(error) {
-                showContactStatus('❌ حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.', 'error');
+                showContactStatus('❌ Something went wrong. Please try again.', 'error');
             });
         });
     }
@@ -409,10 +401,7 @@ const translations = {
         icdl_cert_li2: '✅ تزيد من فرصك في الحصول على وظيفة.',
         icdl_cert_li3: '✅ تثبت كفاءتك في استخدام الحاسوب.',
         icdl_cert_li4: '✅ مطلوبة في معظم الوظائف الإدارية والمكتبية.',
-        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.',
-        success_title: 'تم إرسال طلبك بنجاح!',
-        success_desc: 'سوف نتواصل معك في أقرب وقت.',
-        back_home: 'العودة إلى الرئيسية'
+        icdl_cert_li5: '✅ تمنحك ثقة أكبر في التعامل مع التكنولوجيا.'
     },
     en: {
         home: 'Home',
@@ -631,10 +620,7 @@ const translations = {
         icdl_cert_li2: '✅ Increases your chances of getting a job.',
         icdl_cert_li3: '✅ Proves your computer proficiency.',
         icdl_cert_li4: '✅ Required in most administrative and office jobs.',
-        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.',
-        success_title: 'Your request has been sent successfully!',
-        success_desc: 'We will contact you as soon as possible.',
-        back_home: 'Back to Home'
+        icdl_cert_li5: '✅ Gives you greater confidence in dealing with technology.'
     }
 };
 
