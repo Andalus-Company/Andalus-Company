@@ -104,30 +104,42 @@
                         <span class="contact-form-icon">✉️</span>
                         <h2 data-trans="send_message">Send a Message</h2>
                     </div>
-                <form action="https://formsubmit.co/wissamez99@gmail.com" method="POST">
 
-                </form>
+                    <form id="contactForm" action="https://formsubmit.co/techscieandalus3@gmail.com" method="POST">
+                        
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="📩 رسالة جديدة من موقع أندلس التقنية">
 
-                        <div class="form-group">
-                            <label for="contactName" data-trans="full_name">Full Name *</label>
-                            <input type="text" id="contactName" name="الاسم الكامل" placeholder="Enter your name" class="form-input" required>
+                        <div id="contactFields">
+                            <div class="form-group">
+                                <label for="contactName" data-trans="full_name">Full Name *</label>
+                                <input type="text" id="contactName" name="الاسم الكامل" placeholder="Enter your name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmailInput" data-trans="email_address">Email Address *</label>
+                                <input type="email" id="contactEmailInput" name="البريد الإلكتروني" placeholder="example@email.com" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" data-trans="subject">Subject *</label>
+                                <input type="text" id="contactSubject" name="الموضوع" placeholder="Message subject" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage" data-trans="message">Message *</label>
+                                <textarea id="contactMessage" name="الرسالة" placeholder="Write your message here..." class="form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-send" data-trans="send_btn">📤 Send Message</button>
                         </div>
-                        <div class="form-group">
-                            <label for="contactEmailInput" data-trans="email_address">Email Address *</label>
-                            <input type="email" id="contactEmailInput" name="البريد الإلكتروني" placeholder="example@email.com" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactSubject" data-trans="subject">Subject *</label>
-                            <input type="text" id="contactSubject" name="الموضوع" placeholder="Message subject" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage" data-trans="message">Message *</label>
-                            <textarea id="contactMessage" name="الرسالة" placeholder="Write your message here..." class="form-textarea" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-send" data-trans="send_btn">
-                            📤 Send Message
-                        </button>
                     </form>
+
+                    <!-- رسالة النجاح -->
+                    <div id="successMessageContact" style="display:none; text-align:center; padding:20px;">
+                        <div style="font-size:60px; margin-bottom:10px;">✅</div>
+                        <h3 style="color:var(--secondary);" data-trans="success_title">تم إرسال رسالتك بنجاح!</h3>
+                        <p style="color:var(--gray);" data-trans="success_desc">سوف نتواصل معك في أقرب وقت.</p>
+                        <a href="index.html" class="btn" style="display:inline-block; margin-top:15px; background:var(--secondary); color:var(--primary); padding:12px 35px; border-radius:50px; font-weight:700;">العودة للرئيسية</a>
+                    </div>
+
                     <div id="contactMessageStatus" class="contact-status" style="display:none;"></div>
                 </div>
 
